@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.appcompat.app.AlertDialog
+import androidx.core.text.HtmlCompat
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -58,18 +60,16 @@ class SearchFragment : Fragment() {
         imageListAdapter = ImageListAdapter()
         movieList.adapter = imageListAdapter
         imageListAdapter.setOnMovieClicked { image ->
-//            val dialog = AlertDialog.Builder(requireContext())
-//                .setMessage(HtmlCompat.fromHtml(getString(R.string.details_confirmation, image.user), HtmlCompat.FROM_HTML_MODE_COMPACT))
-//                .setPositiveButton(android.R.string.ok) { _, _ ->
-//                    val action = SearchFragmentDirections.actionShowDetails(image)
-//                    findNavController().navigate(action)
-//                }
-//                .setNegativeButton(android.R.string.cancel, null)
-//                .create()
-//
-//            dialog.show()
-            val action = SearchFragmentDirections.actionShowDetails(image)
-            findNavController().navigate(action)
+            val dialog = AlertDialog.Builder(requireContext())
+                .setMessage(HtmlCompat.fromHtml(getString(R.string.details_confirmation, image.user), HtmlCompat.FROM_HTML_MODE_COMPACT))
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    val action = SearchFragmentDirections.actionShowDetails(image)
+                    findNavController().navigate(action)
+                }
+                .setNegativeButton(android.R.string.cancel, null)
+                .create()
+
+            dialog.show()
         }
 
         scrollListener = SearchScrollListener(
