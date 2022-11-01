@@ -22,6 +22,6 @@ pixabay.key=[Your API Key here]
 ```
 
 ## Screenshots
-![Images List screenshot](/screenshots/list_screenshots.png)
+![Images List screenshot](/screenshots/list_screenshot.png)
 
-![Image Details screenshot](/screenshots/details_screenshots.png)
+![Image Details screenshot](/screenshots/details_screenshot.png)
