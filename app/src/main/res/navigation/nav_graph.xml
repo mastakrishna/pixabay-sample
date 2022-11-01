@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/searchFragment">
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.kajdasz.sample.pixabay.ui.search.SearchFragment"
+        android:label="@string/search_images"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_show_details"
+            app:destination="@+id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.kajdasz.sample.pixabay.ui.details.DetailsFragment"
+        android:label="@string/image_details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="image"
+            app:argType="com.kajdasz.sample.pixabay.domain.model.LocalImage" />
+    </fragment>
+</navigation>

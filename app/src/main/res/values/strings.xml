@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pixabay Sample</string>
+    <string name="search_images">Search Images on Pixabay</string>
+    <string name="search_hint">Enter query here…</string>
+    <string name="search_error">An error occurred while trying to fetch data:\n%1$s</string>
+    <string name="search_no_items">No images found when looking for query:\n%1$s</string>
+    <string name="details_confirmation">Do you want to see more details of the image by &lt;b>%1$s&lt;/b></string>
+    <string name="image_details">Image Details</string>
+</resources>
